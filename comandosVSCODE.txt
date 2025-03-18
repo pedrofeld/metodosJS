@@ -1,0 +1,43 @@
+
+PARA INICIAR UM REPOSITÓRIO
+
+git init
+git add .
+git commit -m "commit"
+git branch -M main
+git remote add origin linkdomeurepositorio.com
+git push -u origin main
+
+PARA USAR UMA NOVA BRANCH
+
+git checkout -b minha-nova-branch
+git add .
+git commit -m "Descrição do que foi alterado"
+git push origin minha-nova-branch
+git checkout main
+git merge minha-nova-branch
+git push origin main
+
+PARA SALVAR EDIÇÕES SEM CRIAR UMA NOVA BRANCH
+git add .
+git commit -m "commit"
+git push origin main
+
+É possível criar um Pull Request no Github para revisar o que foi alterado antes de ser mesclado na main (merge)
+
+PARA FAZER DEPLOY PELO GITHUB PAGES
+
+Depois de criar o repositório, entrar nele e ir em settings > pages > none > main > save 
+Quando estiver verde/disponível, ir em deployments para acessar/copiar/compartilhar o link
+
+PARA FAZER DEPLOY NO VERCEL
+
+Criar repositório, index precisa estar na raiz, fora de qualquer pasta
+Entrar no vercel, selecionar o repositório do git, clicar em importar
+Colocar nome e selecionar o caminho da pasta que está o arquivo index
+Clicar em deploy e esperar o  status
+
+ATALHOS
+
+tab = adiciona indentação
+shift + tab = remove a indentação
