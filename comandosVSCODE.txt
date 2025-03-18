@@ -21,7 +21,7 @@ git push origin main
 PARA SALVAR EDIÇÕES SEM CRIAR UMA NOVA BRANCH
 git add .
 git commit -m "commit"
-git push origin main
+git push
 
 É possível criar um Pull Request no Github para revisar o que foi alterado antes de ser mesclado na main (merge)
 
