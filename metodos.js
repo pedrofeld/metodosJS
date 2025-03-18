@@ -248,7 +248,7 @@ let produtosAtualizados = produtosMercado.map((item) => {
         preco: item.preco - (item.preco * 0.1)
     };
 });
-console.log(produtosAtualizados)
+console.log(produtosAtualizados);
 
 /*
 22) Você trabalha numa biblioteca e precisa criar uma lista
@@ -280,7 +280,7 @@ let livrosPaginasRestantes = livros.map(item => {
         paginasRestantes: item.totalPaginas - item.paginasLidas
     };
 });
-console.log(livrosPaginasRestantes)
+console.log(livrosPaginasRestantes);
 
 /*
 23) Você está organizando uma festa e tem uma lista de
@@ -291,5 +291,5 @@ usando o forEach.
 let convidados = ["João", "Maria", "Carlos", "Fernanda"];
 
 convidados.forEach(item => {
-    console.log(`Olá, ${item}! Você está confirmado`)
-})
+    console.log(`Olá, ${item}! Você está confirmado`);
+});
