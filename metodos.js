@@ -293,3 +293,132 @@ let convidados = ["João", "Maria", "Carlos", "Fernanda"];
 convidados.forEach(item => {
     console.log(`Olá, ${item}! Você está confirmado`);
 });
+
+/*
+24) Vamos imaginar que voce tem uma lista de frutas e deseja
+obter apenas as primeiras três frutas dessa lista.
+*/
+let minhasFrutas = ["Maçã", "Banana", "Laranja", "Uva", "Abacaxi"];
+let minhas3Frutas = minhasFrutas.slice(0, 3);
+console.log(minhas3Frutas);
+
+/*
+25) Você tem uma lista de tarefas e deseja obter todas 
+as tarefas, exceto as duas primeiras, mas sem alterar a
+lista original.
+*/
+let tarefas = [
+    "Estudar para a prova", "Revisar os exercícios", 
+    "Assistir as aulas", "Ler um livro"
+];
+let tarefasMantidas = tarefas.slice(2, 4);
+console.log(tarefasMantidas);
+
+/*
+26) Refaça o exercício acima, mas dessa vez excluindo os 
+dois primeiro itens da lista original.
+*/
+tarefas.splice(0, 2);
+console.log(tarefas);
+
+/*
+27) Você tem uma lista de ingredientes para uma receita e
+deseja criar um única string que contenha todos os 
+ingredientes separados por vírgulas.
+*/
+let ingredientes = ["Farinha", "Açúcar", "Ovos", "Leite", "Manteiga"];
+let receita = ingredientes.join(", ");
+console.log(receita);
+
+/*
+28) Você está organizando um campeonato de jogos e tem uma
+lista de jogadores inscritos, Você quer verificar se um
+jogador específico se inscreveu no campeonato.
+*/
+let jogadoresInscritos = [
+    "Lucas", "Mariana", "Felipe", 
+    "Tatiane", "Roberto,"
+];
+let jogadorParaVerificar = "Felipe";
+let confirmarJogador = jogadoresInscritos.includes(jogadorParaVerificar);
+console.log(`O ${jogadorParaVerificar} está inscrito: ${confirmarJogador}`);
+
+/*
+29) Você é o organizador de um campeonato de futebol. Para
+garantir que tudo saia conforme o planejado, você criou uma
+lista de tarefas. Mas essa lista está em ordem invertida e 
+você precisa corrigir.
+*/
+let tarefasDoCampeonato = [
+    "Divulgar o evento",
+    "Definir as equipes",
+    "Comprar os prêmios",
+    "Escolher o local do jogo",
+    "Criar as regras do torneio"
+];
+tarefasDoCampeonato.reverse();
+console.log(tarefasDoCampeonato);
+
+/*
+30) Você está organizando uma lista de nomes e quer se
+certificar que todos os convidados estão organizado em
+ordem alfabética para facilitar a hora de fazer as ligações.
+*/
+let nomesConvidados = ["Carlos", "Ana", "Mariana", "Felipe", "João"];
+nomesConvidados.sort((a, b) => {
+    if(a < b) {
+        return -1
+    }
+
+    return 1
+});
+console.log(nomesConvidados);
+
+/*
+31) Você está rganizando uma equipe para um torneio de
+esportes e precisa classificar os participantes por idade.
+Para isso, você fez uma lista com as idades deles e quer
+organizá-los do mais jovem para o mais velho.
+*/
+let clienteLista = [
+    { nome: "Pedro", idade: 20 },
+    { nome: "Joana", idade: 25 },
+    { nome: "Maria", idade: 12 },
+    { nome: "Cleide", idade: 65 },
+];
+clienteLista.sort((a, b) => {
+    if(a.idade < b.idade) {
+        return -1
+    }
+
+    return 1
+});
+console.log(clienteLista);
+
+/*
+32) Um funcionário de uma loja precisa saber quanto vendeu no
+último dia. Então ele fez uma lista com os valores das vendas
+dos produtos e calculou o total.
+*/
+let vendas = [150.75, 200.5, 50.25, 80.0, 120.0];
+let somaVendas = vendas.reduce((somaAtual, item) => {
+    return somaAtual + item
+}, 0);
+console.log(somaVendas);
+
+/*
+33) Você está acompanhando um campeonato de videogame e deseja 
+saber quantos pontos seus amigos acumularam juntos em uma
+partida.
+*/
+let pontosJogadores = [
+    { jogador: "Pedro", pontos: 20 },
+    { jogador: "Maria", pontos: 50 },
+    { jogador: "Cleide", pontos: 5 },
+    { jogador: "Pedro", pontos: 150 },
+    { jogador: "Maria", pontos: 298 },
+];
+let totalPontos = pontosJogadores.reduce((somaAtual, item) => {
+    return somaAtual + item.pontos
+}, 0);
+console.log(totalPontos);
