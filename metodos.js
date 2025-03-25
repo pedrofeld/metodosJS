@@ -422,3 +422,8 @@ let totalPontos = pontosJogadores.reduce((somaAtual, item) => {
     return somaAtual + item.pontos
 }, 0);
 console.log(totalPontos);
+
+function trocarImagem(){
+    let imagem = document.getElementsByTagName("img")[0];
+    imagem.src = "./images/imagem2.jpg"
+}
