@@ -445,3 +445,20 @@ function adicionarTarefa(){
 document.getElementById("listaTarefas").addEventListener("click", function(event) {
     event.target.remove() //remove o item clicado
 });
+
+let i = 0;
+
+function aumentarContagem(){
+    i++;
+    let contagem = document.getElementById('cliques');
+    contagem.textContent= 'Número de cliques: ' + i;
+};
+
+function mostrarHover(){
+    let hoverText = document.getElementById('hover');
+    hoverText.innerText = 'Você passou o mouse!';
+};
+
+window.onload = function() {
+    alert('Bem-vindo Visitante');
+};
