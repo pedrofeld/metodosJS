@@ -425,25 +425,25 @@ console.log(totalPontos);
 
 function trocarImagem(){
     let imagem = document.getElementsByTagName("img")[0];
-    imagem.src = "./images/imagem2.jpg"
-}
+    imagem.src = "./images/imagem2.jpg";
+};
 
 function adicionarTarefa(){
-    let input = document.getElementById('entrada')
-    let lista = document.getElementById("listaTarefas")
-    let item = document.createElement("li")
-    item.textContent = input.value
-    lista.appendChild(item)
+    let input = document.getElementById('entrada');
+    let lista = document.getElementById("listaTarefas");
+    let item = document.createElement("li");
+    item.textContent = input.value;
+    lista.appendChild(item);
 
     /* 
     item.onclick = function(){
         lista.removeChild(item)
     }
     */
-}
+};
 
 document.getElementById("listaTarefas").addEventListener("click", function(event) {
-    event.target.remove() //remove o item clicado
+    event.target.remove(); //remove o item clicado
 });
 
 let i = 0;
