@@ -23,6 +23,12 @@ git add .
 git commit -m "commit"
 git push
 
+PARA ACESSAR UM REPOSITÓRIO EM UMA SEGUNDA MÁQUINA
+git clone linkdorepositório.com
+
+PARA MANTER O PROJETO SINCRONIZADO ENTRE OS DOIS COMPUTADORES
+git pull origin main
+
 É possível criar um Pull Request no Github para revisar o que foi alterado antes de ser mesclado na main (merge)
 
 PARA FAZER DEPLOY PELO GITHUB PAGES
