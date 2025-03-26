@@ -461,10 +461,17 @@ function mostrarHover(){
 
 window.onload = function() {
     alert('Bem-vindo Visitante');
+
     const paragrafo = document.createElement('p');
     paragrafo.textContent = 'URL atual: ' + window.location.href;
     const container = document.getElementById('urlAtual');
     container.appendChild(paragrafo);
+
+    if(!sessionStorage.getItem('contadorSessao')){
+        sessionStorage.setItem('contadorSessao', 0);
+    }
+
+    atualizarContadores();
 };
 
 function navegar(){
@@ -481,3 +488,22 @@ function atribuir(){
     let url = document.getElementById('url').value;
     window.location.assign(url);
 };
+
+function atualizarContadores() {
+    let contadorTotal = localStorage.getItem('contadorTotal') || 0;
+    let contadorSessao = sessionStorage.getItem('contadorSessao');
+
+    document.getElementById('contadorTotal').textContent = 'Total de cliques com Local Storage: ' + contadorTotal;
+    document.getElementById('contadorSessao').textContent = 'Total de cliques nesta sessão: ' + contadorSessao;
+}
+
+function contarCliques() {
+    let contadorSessao = parseInt(sessionStorage.getItem('contadorSessao')) + 1;
+    sessionStorage.setItem('contadorSessao', contadorSessao);
+
+    let contadorTotal = parseInt(localStorage.getItem('contadorTotal')) || 0;
+    contadorTotal++;
+    localStorage.setItem('contadorTotal', contadorTotal);
+
+    atualizarContadores();
+}
