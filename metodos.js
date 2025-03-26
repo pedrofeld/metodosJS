@@ -461,4 +461,23 @@ function mostrarHover(){
 
 window.onload = function() {
     alert('Bem-vindo Visitante');
+    const paragrafo = document.createElement('p');
+    paragrafo.textContent = 'URL atual: ' + window.location.href;
+    const container = document.getElementById('urlAtual');
+    container.appendChild(paragrafo);
+};
+
+function navegar(){
+    let url = document.getElementById('url').value;
+    window.location.href = url;
+};
+
+function substituir(){
+    let url = document.getElementById('url').value;
+    window.location.replace(url);
+};
+
+function atribuir(){
+    let url = document.getElementById('url').value;
+    window.location.assign(url);
 };
